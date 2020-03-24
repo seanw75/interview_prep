@@ -35,6 +35,10 @@ Parse a log except, providing a csv of the count of each proc per DTTM.
 
 ## Architecture
 
+* Design Twitter / YouTube / Facebook
+   * [Twitter](https://blog.twitter.com/engineering/en_us/topics/infrastructure/2017/the-infrastructure-behind-twitter-scale.html)
+   * [twitter example](https://medium.com/@narengowda/system-design-for-twitter-e737284afc95)
+
 ## Troubleshooting
 * Debug a server currently serving errors.
 
