@@ -1,4 +1,8 @@
+
 # Linkedin Site Reliability engineer
+## Useful Links
+* [Interview methodology from LinkedIn](https://engineering.linkedin.com/blog/2017/07/hiring-sres-at-linkedin)
+* [Original adapted from github@krishnaramb](https://github.com/krishnaramb/FB_Prep/wiki/linkedin)
 ## Coding
 * coding interview covering log parsing and HTTP requests.
 * Describe the relationship between a class and an object
