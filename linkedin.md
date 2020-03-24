@@ -1,81 +1,71 @@
-Linkedin Site Reliability engineer
-coding
-The coding round is easy. 5 questions. One had to be done by recursion, others were on text processing. It was on coderpad.io. You can use any language you want to code.
-coding interview covering log parsing and HTTP requests.
+# Linkedin Site Reliability engineer
+## Coding
+* coding interview covering log parsing and HTTP requests.
 * Describe the relationship between a class and an object
-He asked 4 coding questions, 1 pretty basic scripting, 2 log processing , and 1 network.
 * Parse a log file based on the interviewer's choice (String format is huge)
 * Questions on file-system traversal, log processing and APIs.
 * Write code to parse generic web logs and format it in different ways
 * First was a fizz buzz type question. Second and third were both log parsing
 * Last one was involved in Linkedin RESTful api calling and recursion
-Review poorly written code and point out the places where it would fail. 
-* Some things about scaling IT infrastructure
-fizz buzz, export to CSV, pull some stuff out of logs and count it.
-Take part of a log file, export to CSV
-wanted me to solve a pretty messy problem processing a spreadsheet input with an online algorithm in python to print a set of tables using maps it in linear time,.
-How do you write a regular expression for some silly pattern in Python
-erview Questions
-Write a program which prints out all numbers between 1 and 100. When the program would print out a number exactly divisible by 4, print "Linked" instead. When it would print out a number exactly divisible by 6, print "In" instead. When it would print out a number exactly divisible by both 4 and 6, print "LinkedIn."
-conceptual and design interview
-2 conceptual/design interviews. Many questions on systems knowledge ( networks, OS, linux, ssl, etc). To prepare: read the networks: top down approach book. For linux, do unix and linux sys admins handbook. For system design, google "system design primer". Its a github link. That was it. No on-site (for interns).
+* Take part of a log file, export to CSV
 
-* How would you design a scale out web service.
-* Debug a server currently serving errors.
+### Debugging Code
+* Review poorly written code and point out the places where it would fail. 
+* fizz buzz
+* export to CSV
+* pull some stuff out of logs and count it.
+* wanted me to solve a pretty messy problem processing a spreadsheet input with an online algorithm in python to print a set of tables using maps it in linear time,.
+* How do you write a regular expression for some silly pattern in Python
+* Write a program which prints out all numbers between 1 and 100. When the program would print out a number exactly divisible by 4, print "Linked" instead. When it would print out a number exactly divisible by 6, print "In" instead. When it would print out a number exactly divisible by both 4 and 6, print "LinkedIn."
 
-What kind of IP addresses are these lists recognizable ones
-
-Interviewer describes the full stack setup of a web app, Please list the benefits and disadvantages of this setup. And if you could, how would you improve it?
-
-First round consisted of 3 simple coding problems related to sysadmin tasks like log parsing and interacting with a REST api.
-
-log parsing
-
+### log parsing
 Recursive call of LinkedIn api using REST.
-
 Parse a log except, providing a csv of the count of each proc per DTTM.
 
-it was a "code-mill" test, and I am not (and never claimed to be) a F/T developer.
+## Technology
+* How would you design a scale out web service.
+* Some things about scaling IT infrastructure
+* conceptual/design interviews. Many questions on systems knowledge ( networks, OS, linux, ssl, etc). To prepare: read the networks: top down approach book. For linux, do unix and linux sys admins handbook. For system design, google "system design primer". Its a github link. That was it. No on-site (for interns).
+* Interviewer describes the full stack setup of a web app, Please list the benefits and disadvantages of this setup. And if you could, how would you improve it?
+* high-level asking of questions related to web architecture and how I would go about scaling X or Y.
 
-modules ranging from code review, incident management to architecture
+## Architecture
 
-high-level asking of questions related to web architecture and how I would go about scaling X or Y.
+## Troubleshooting
+* Debug a server currently serving errors.
 
-There were two and they both happened during the live-debugging portion of the interview.
+* What kind of IP addresses are these lists recognizable ones
+* First round consisted of 3 simple coding problems related to sysadmin tasks like log parsing and interacting with a REST api.
 
-All of the live debugging questions revolved around a simple website that had something broken in it. You were to fix the brokenness to be able to move on to the next page. In total there were 4 questions, each getting progressively more difficult to debug.
+* modules ranging from code review, incident management to architecture
 
-The first question was a simple permissions problem on a file being requested by the client. The ownership of the file (a blank text file) was too restrictive, so it was raising an error. You could verify this in the apache web logs.
+### Apache
+* The first question was a simple permissions problem on a file being requested by the client. The ownership of the file (a blank text file) was too restrictive, so it was raising an error. You could verify this in the apache web logs.
+* The second error was due to a permission problem too, however this time the file was hidden in a sub directory of the main web site. You could only determine this by looking at the apache configuration file to see that the shtml file was located somewhere else. After that, change the permissions to fix.
+* The third was a head scratcher. The filename in question was raising a 500 error and showing urlencoded characters in the filename in the web log. Looking at the name of the file on disk though, showed nothing out of the ordinary.
 
-The second error was due to a permission problem too, however this time the file was hidden in a sub directory of the main web site. You could only determine this by looking at the apache configuration file to see that the shtml file was located somewhere else. After that, change the permissions to fix.
+** It turns out that the unicode representations for the characters in the file name are printed in the terminal as english ascii characters. The only way you can tell that this is the case is to open the file and do a search for the filename itself and see if it matches. For example, if the correct filename is called "challenge1.shtml" you can search for that exact string but NOT find the unicode version of it.
 
-The third was a head scratcher. The filename in question was raising a 500 error and showing urlencoded characters in the filename in the web log. Looking at the name of the file on disk though, showed nothing out of the ordinary.
+** Once you find the incorrect file name, delete it and type the correct file name (in this case "challenge3.shtml" into the file and the page works.
 
-It turns out that the unicode representations for the characters in the file name are printed in the terminal as english ascii characters. The only way you can tell that this is the case is to open the file and do a search for the filename itself and see if it matches. For example, if the correct filename is called "challenge1.shtml" you can search for that exact string but NOT find the unicode version of it.
+* The final question was a segfault occurring in apache. It resulted in no information being returned to the client. You could see this occurring in the apache web logs as well as the Chrome tools.
 
-Once you find the incorrect file name, delete it and type the correct file name (in this case "challenge3.shtml" into the file and the page works.
+** The apache web logs noted that a core file was dumped. This challenge required that you know a little bit about gdb and C programming. Basically, you need to run the core dump through gdb.
 
-The final question was a segfault occurring in apache. It resulted in no information being returned to the client. You could see this occurring in the apache web logs as well as the Chrome tools.
+** _gdb /path/to/apache /path/to/core/dump_
+** It will spew out a lot of stuff. In particular, it mentions that there is something happening in an apache module; mod_rewrite or something...it doesnt really matter.
 
-The apache web logs noted that a core file was dumped. This challenge required that you know a little bit about gdb and C programming. Basically, you need to run the core dump through gdb.
+** The output also points to the C source file for that module which is, conveniently on disk. Open that file in vi and jump to the line number mentioned in the gdb output (line 1861 or something). There you will see that if the filename matches challenge4.shtml to SIGSEGV; there's your smoke gun.
 
-gdb /path/to/apache /path/to/core/dump
-It will spew out a lot of stuff. In particular, it mentions that there is something happening in an apache module; mod_rewrite or something...it doesnt really matter.
+** They dont ask you to fix the final challenge, only to explain what the strstr is doing. The error in question basically looks like this
 
-The output also points to the C source file for that module which is, conveniently on disk. Open that file in vi and jump to the line number mentioned in the gdb output (line 1861 or something). There you will see that if the filename matches challenge4.shtml to SIGSEGV; there's your smoke gun.
+_ if (strstr($r->filename, "challenge4.shtml") != NULL) { SIGSEGV } _
 
-They dont ask you to fix the final challenge, only to explain what the strstr is doing. The error in question basically looks like this
-
-if (strstr($r->filename, "challenge4.shtml") != NULL) { SIGSEGV }
-
-Just point out to them that, yeah, it's segfaulting when I ask for that file.
-8 Answers Show Less There was a paper presented to you with a number of nagios alerts and you had to rate them in the order you would approach fixing them.
-
-For example, one of them was a production host being 100% offline.
-
-Another was an environment alert about an entire cab that was overheating. Another was the tablet vip being down, another was a load average for the main website being really high.
-
-There were also a number of them that were QPS (queries per sec) related and included several security related alerts like XSS QPS and failed logins QPS
+** Just point out to them that, yeah, it's segfaulting when I ask for that file.
+* There was a paper presented to you with a number of nagios alerts and you had to rate them in the order you would approach fixing them.
+** For example, one of them was a production host being 100% offline.
+** Another was an environment alert about an entire cab that was overheating. Another was the tablet vip being down, another was a load average for the main website being really high.
+** There were also a number of them that were QPS (queries per sec) related and included several security related alerts like XSS QPS and failed logins QPS
 
 Linux kernel internals got pretty in depth, as did questions about system architecture for high-performance websites
 You need to distribute a terabyte of data from a single server to 10,000 nodes, and then keep that data up to date. It takes several hours to copy the data just to one server. How would you do this so that it didn't take 20,000 hours to update all the servers? Also, how would you make sure that the file wasn't corrupted during the copy?
