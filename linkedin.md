@@ -2,14 +2,15 @@ Linkedin Site Reliability engineer
 coding
 The coding round is easy. 5 questions. One had to be done by recursion, others were on text processing. It was on coderpad.io. You can use any language you want to code.
 coding interview covering log parsing and HTTP requests.
-Describe the relationship between a class and an object
+* Describe the relationship between a class and an object
 He asked 4 coding questions, 1 pretty basic scripting, 2 log processing , and 1 network.
-Parse a log file based on the interviewer's choice (String format is huge)
-Questions on file-system traversal, log processing and APIs.
-Write code to parse generic web logs and format it in different ways
-First was a fizz buzz type question. Second and third were both log parsing
-Last one was involved in Linkedin RESTful api calling and recursion
-Review poorly written code and point out the places where it would fail. 2. Some things about scaling IT infrastructure
+* Parse a log file based on the interviewer's choice (String format is huge)
+* Questions on file-system traversal, log processing and APIs.
+* Write code to parse generic web logs and format it in different ways
+* First was a fizz buzz type question. Second and third were both log parsing
+* Last one was involved in Linkedin RESTful api calling and recursion
+Review poorly written code and point out the places where it would fail. 
+* Some things about scaling IT infrastructure
 fizz buzz, export to CSV, pull some stuff out of logs and count it.
 Take part of a log file, export to CSV
 wanted me to solve a pretty messy problem processing a spreadsheet input with an online algorithm in python to print a set of tables using maps it in linear time,.
@@ -19,9 +20,8 @@ Write a program which prints out all numbers between 1 and 100. When the program
 conceptual and design interview
 2 conceptual/design interviews. Many questions on systems knowledge ( networks, OS, linux, ssl, etc). To prepare: read the networks: top down approach book. For linux, do unix and linux sys admins handbook. For system design, google "system design primer". Its a github link. That was it. No on-site (for interns).
 
-How would you design a scale out web service.
-
-Debug a server currently serving errors.
+* How would you design a scale out web service.
+* Debug a server currently serving errors.
 
 What kind of IP addresses are these lists recognizable ones
 
@@ -143,12 +143,15 @@ Talk me through what happens when you make an ssh connection to a remote machine
 Name as many TCP flags as you can. (URG, ACK, PSH, RST, SYN, FIN - mnemonic: Unskilled Attackers Pester Real Security Folks.)
 What protocol(s) do/does DNS use when you run an nslookup. (answer: normally UDP, but TCP is used for zone transfers and if a record is too long to be returned via UDP)
 Describe the difference between TCP and UDP, advantages and disadvantages of both.
-When I try to connected to a remote machine using (for example) ssh, how does ssh know how to get to that remote machine. (be able to describe routing, default routes, and host name lookup.) The programming portion of the interview tests your ability to program in the scripting language of your choice. You can use common languages such as Perl, Python, Ruby, or PHP. You cannot use Bash or other shell interpreters (no sh, ksh, csh, etc) This part of the interview tripped me up a little bit, as most of my programming is oriented towards systems engineering problems. I write scripts to parse logs, distribute files, perform backups, etc. I don't do a lot of CS type programming. Unfortunately, the screener threw several of these types of problems at me, and it kinda threw me for a loop. I was able to solve these problems, but I'm sure I didn't instill the screener with a lot of confidence.
-Write a perl program that prints a 12x12 multiplication table matrix.
-Write a program that reverses the contents of a file, byte for byte.
-Write a program that counts from 1 to 100. For each number, print a certain string if the number is evenly divisible by 6. Print a different string if the number is evenly divisible by 4. Print yet another string if the number is evenly divisible by 24. If none of these cases match, print the number.
-Write a program that descends through a directory tree and prints all files. (hint: recursion is your friend here.)
-Given an Apache log file, print the timestamp hour, minute, and second, followed by the number of times any log entry occurs during that time. (hint: if you're programming in perl, a hashed array works great here.)
+When I try to connected to a remote machine using (for example) ssh, how does ssh know how to get to that remote machine. (be able to describe routing, default routes, and host name lookup.) 
+* Coding *
+** The programming portion of the interview tests your ability to program in the scripting language of your choice. You can use common languages such as Perl, Python, Ruby, or PHP. You cannot use Bash or other shell interpreters (no sh, ksh, csh, etc) This part of the interview tripped me up a little bit, as most of my programming is oriented towards systems engineering problems. I write scripts to parse logs, distribute files, perform backups, etc. I don't do a lot of CS type programming. Unfortunately, the screener threw several of these types of problems at me, and it kinda threw me for a loop. I was able to solve these problems, but I'm sure I didn't instill the screener with a lot of confidence.
+* Write a perl program that prints a 12x12 multiplication table matrix.
+* Write a program that reverses the contents of a file, byte for byte.
+* Write a program that counts from 1 to 100. For each number, print a certain string if the number is evenly divisible by 6. Print a different string if the number is evenly divisible by 4. Print yet another string if the number is evenly divisible by 24. If none of these cases match, print the number.
+* Write a program that descends through a directory tree and prints all files. (hint: recursion is your friend here.)
+* Given an Apache log file, print the timestamp hour, minute, and second, followed by the number of times any log entry occurs during that time. (hint: if you're programming in perl, a hashed array works great here.)
+
 Asked me how the kernel new to connect to a remote machine . Wasn't too sure if they were asking the lower level c calls, general OS theory, or just basic files / networking components (routing table). Also asked basic monitoring questions like how to monitor query times (bonked on this, just couldn't think well being nervous)
 sysadmin basics, how's the boot process for a linux machine.
 System Design questions revolving around implementing a file server system.
