@@ -3,7 +3,8 @@
 ## Useful Links
 * [Interview methodology from LinkedIn](https://engineering.linkedin.com/blog/2017/07/hiring-sres-at-linkedin)
 * [Original adapted from github@krishnaramb](https://github.com/krishnaramb/FB_Prep/wiki/linkedin)
-* To prepare: read the networks: top down approach book. For linux, do unix and linux sys admins handbook. For system design, google "system design primer". Its a github link. That was it. No on-site (for interns).
+* [System Design primer](https://github.com/donnemartin/system-design-primer)
+* To prepare: read the networks: top down approach book. For linux, do unix and linux sys admins handbook
 ## Coding
 * Describe the relationship between a class and an object
 * How do you write a regular expression for some silly pattern in Python
@@ -11,14 +12,18 @@
 * Write a program that reverses the contents of a file, byte for byte.
 * Write a program that descends through a directory tree and prints all files. (hint: recursion is your friend here.)
 ### fizz buzz
+* [Example](https://ditam.github.io/posts/fizzbuzz/)
 * Write a program which prints out all numbers between 1 and 100. When the program would print out a number exactly divisible by 4, print "Linked" instead. When it would print out a number exactly divisible by 6, print "In" instead. When it would print out a number exactly divisible by both 4 and 6, print "LinkedIn."
 ### log parsing
+* [Example](https://stackoverflow.com/questions/30627810/how-to-parse-this-custom-log-file-in-python)
 * Write code to parse generic web logs and format it in different ways
 * Given an Apache log file, print the timestamp hour, minute, and second, followed by the number of times any log entry occurs during that time. (hint: if you're programming in perl, a hashed array works great here.)
 * Parse a log file based on the interviewer's choice (String format is huge)
 * Take part of a log file, export to CSV
 * Parse a log except, providing a csv of the count of each proc per DTTM.
-* pull some stuff out of logs and count it.
+* pull some stuff out of logs and count it
+* Print all statistics of every process name and its log for every minute of a piece of system log. In other word, use minute as row title, print all statistics in the corresponding minutes.
+   * people answer is there in glassdoor
 ### Rest API
 * Last one was involved in Linkedin RESTful api calling and recursion
 * Recursive call of LinkedIn api using REST.
@@ -27,9 +32,7 @@
 ### misc coding
 * wanted me to solve a pretty messy problem processing a spreadsheet input with an online algorithm in python to print a set of tables using maps it in linear time,.
 
-
 ## Technology
-* How would you design a scale out web service.
 * Some things about scaling IT infrastructure
 * conceptual/design interviews. Many questions on systems knowledge ( networks, OS, linux, ssl, etc). 
 * Interviewer describes the full stack setup of a web app, Please list the benefits and disadvantages of this setup. And if you could, how would you improve it?
@@ -39,6 +42,7 @@
 * Design Twitter / YouTube / Facebook
    * [Twitter](https://blog.twitter.com/engineering/en_us/topics/infrastructure/2017/the-infrastructure-behind-twitter-scale.html)
    * [twitter example](https://medium.com/@narengowda/system-design-for-twitter-e737284afc95)
+* How would you design a scale out web service.
 
 ## Troubleshooting
 * First round consisted of 3 simple coding problems related to sysadmin tasks like log parsing and interacting with a REST api.
@@ -70,11 +74,9 @@ Linux kernel internals got pretty in depth, as did questions about system archit
 * It takes several hours to copy the data just to one server. 
 * How would you do this so that it didn't take 20,000 hours to update all the servers? 
 * Also, how would you make sure that the file wasn't corrupted during the copy?
-some answer in the glassdoor page as well
-system
+
 * Expained everything from fork, exec, dns, tcp, http, etc etc.
-* I've been going for 45 minutes, starting with loading the binary with ld and diving into the public cryptography.
-* some technical questions about OS, basic Linux administration,Networking and Python.
+* public cryptography.
 * Questions on IP addressing , port numbers,TCP headers, basic linux commands,processes.
 * How HTTPS works
 * Asked about API calls and parsing data returned from them.
@@ -82,11 +84,7 @@ system
 * I focussed more on Linux Fundamentals like learning about fork, runleves, init, docker, application deployment and port numbers.
 * data structure, API, and file system I/O).
 * basic questions about linux os and networking. Coding screen with actual SRE via collabedit, focused on file system, log parsing, deployment.
-* Print all statistics of every process name and its log for every minute of a piece of system log. In other word, use minute as row title, print all statistics in the corresponding minutes.
-   * people answer is there in glassdoor
 * deep dive into all the stuff I knew about networking, UNIX, operating systems, parallelism, security, and other relevant stuff. The next engineer presented a case study, focusing on scalability of a simple system.
-* http
-* fork
 * process priority
 * Question about shell, tcp/ip and Linux internal( fork, etc.)
 * They asked me about Bash Shell, https, IPv4, etc.
@@ -110,7 +108,6 @@ system
 * "You type ssh . Can you talk for 30 minutes about what is going on between you hit Enter and you get the login prompt?"
 * Talk me through what happens when you make an ssh connection to a remote machine. Be able to be specific, such as the identification string exchange, algorithm negotiation, key exchange, etc.
 
-
 ## Linux
 * sysadmin basics, how's the boot process for a linux machine.
 * System Design questions revolving around implementing a file server system.
@@ -128,7 +125,6 @@ system
 * what tool you can use to check I/O load. 
 * HTTP browser request, 
 * how to monitor a website, 
-* to distribute loads of files fast and accurrately.
 ## generic
 * What is the most rewarding problem that you've overcome in your work?
 * What problem did you solve in your career that you are most proud of.
