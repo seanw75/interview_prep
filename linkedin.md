@@ -96,6 +96,7 @@ Linux kernel internals got pretty in depth, as did questions about system archit
 
 ## Networking
 * a list of IP addresses and asked which ones are public and which ones are private (it weren't as easy as 127.0.0.1 or 192.168.0.1).
+   * [ipv4 private addrs](https://en.wikipedia.org/wiki/Private_network)
 * What kind of IP addresses are these lists recognizable ones
 * what is the name of the protocols for blahblah...
 * Describe the difference between TCP and UDP, advantages and disadvantages of both.
