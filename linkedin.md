@@ -77,7 +77,7 @@ Linux kernel internals got pretty in depth, as did questions about system archit
 * Expained everything from fork, exec, dns, tcp, http, etc etc.
 * public cryptography.
 * Questions on IP addressing , port numbers,TCP headers, basic linux commands,processes.
-* How HTTPS works
+* How HTTPS works - [tls](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/)
 * Asked about API calls and parsing data returned from them.
 * the questions were on bash, tcp, processors
 * I focussed more on Linux Fundamentals like learning about fork, runleves, init, docker, application deployment and port numbers.
