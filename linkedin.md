@@ -74,7 +74,6 @@ Linux kernel internals got pretty in depth, as did questions about system archit
 * It takes several hours to copy the data just to one server. 
 * How would you do this so that it didn't take 20,000 hours to update all the servers? 
 * Also, how would you make sure that the file wasn't corrupted during the copy?
-
 * Expained everything from fork, exec, dns, tcp, http, etc etc.
 * public cryptography.
 * Questions on IP addressing , port numbers,TCP headers, basic linux commands,processes.
@@ -102,7 +101,7 @@ Linux kernel internals got pretty in depth, as did questions about system archit
 * Describe the difference between TCP and UDP, advantages and disadvantages of both.
 * Name as many TCP flags as you can. (URG, ACK, PSH, RST, SYN, FIN - mnemonic: Unskilled Attackers Pester Real Security Folks.)
 * What protocol(s) do/does DNS use when you run an nslookup. (answer: normally UDP, but TCP is used for zone transfers and if a record is too long to be returned via UDP)
-* Describe what happens when you do "curl".?
+* Describe what happens when you do "curl".? [github](https://github.com/alex/what-happens-when)
 
 ### SSH
 * When I try to connected to a remote machine using (for example) ssh, how does ssh know how to get to that remote machine. (be able to describe routing, default routes, and host name lookup.) 
