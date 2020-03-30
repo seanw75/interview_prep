@@ -4,6 +4,7 @@
 * [Interview methodology from LinkedIn](https://engineering.linkedin.com/blog/2017/07/hiring-sres-at-linkedin)
 * [Original adapted from github@krishnaramb](https://github.com/krishnaramb/FB_Prep/wiki/linkedin)
 * [System Design primer](https://github.com/donnemartin/system-design-primer)
+* [Google SRE book](https://landing.google.com/sre/sre-book/chapters/introduction/)
 * To prepare: read the networks: top down approach book. For linux, do unix and linux sys admins handbook
 ## Coding
 * Describe the relationship between a class and an object
